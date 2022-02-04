@@ -56,22 +56,21 @@ export default class New_Question extends Component {
                     <label>Question</label>
                     <input onChange={(e) => this.setState({ question: e.target.value })} />
                 </div>
-            
-                  <div className='new-q'> 
+                <div className='new-q'> 
                     <label>Answer1</label>
-                        <input onChange={(e) => this.setState({ answer1: e.target.value })} height='100'/>
+                    <input onChange={(e) => this.setState({ answer1: e.target.value })} height='100'/>
                 </div>
                 <div className='new-q'>
                     <label>Answer2</label>
-                        <input onChange={(e) => this.setState({ answer2: e.target.value })} />
+                    <input onChange={(e) => this.setState({ answer2: e.target.value })} />
                 </div>
                 <div className='new-q'>
                     <label>Answer3</label>
-                        <input onChange={(e) => this.setState({ answer3: e.target.value })} />
+                    <input onChange={(e) => this.setState({ answer3: e.target.value })} />
                </div>
                 <div className='new-q'>
                     <label>Answer4</label>
-                        <input onChange={(e) => this.setState({ answer4: e.target.value })} />
+                    <input onChange={(e) => this.setState({ answer4: e.target.value })} />
                 </div>
                 <div className='new-q'>
                     <label>Correct answer</label>

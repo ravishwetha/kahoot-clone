@@ -27,7 +27,7 @@ class New_Quiz extends Component {
         })
     }
     createQuiz(){
-        axios.post('/api/newquiz', {name: this.state.quiz_name, info: this.state.info}).then( res => {
+        axios.post('http://localhost:3001/api/newquiz', {name: this.state.quiz_name, info: this.state.info}).then( res => {
            this.props.editingQuiz(res.data[0])
            this.setState({
                redirect: true

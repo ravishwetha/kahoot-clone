@@ -16,9 +16,9 @@ class Game extends Component {
             gameOver: false,
             currentQuestion: 0,
             questions: [],
-            players: [],
-            playerCounter: 0,
-            leaderBoard: []
+            players: [{id: 0, name: 'student 1', score: [1,4,60], qAnswered: false}, {id: 1, name: 'student 2', score: [1,3,40], qAnswered: true}],
+            playerCounter: 3,
+            leaderBoard: ["student 1", "student 2", "student 3"]
         }
         this.questionOver = this.questionOver.bind(this);
         this.nextQuestion = this.nextQuestion.bind(this);
@@ -39,7 +39,8 @@ class Game extends Component {
 
     }
     generatePin() {
-        let newPin = Math.floor(Math.random() * 9000, 10000)
+        // let newPin = Math.floor(Math.random() * 9000, 10000)
+        let newPin = 1234
         this.setState({ pin: newPin })
         this.socket.emit('host-join', { pin: newPin });
     }

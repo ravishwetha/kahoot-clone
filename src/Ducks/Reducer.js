@@ -1,8 +1,8 @@
 const initialState = {
-    quiz: {},
+    quiz: {id: 1},
     nickname: '',
     selectedPin: 0,
-    quizToEdit: {}
+    quizToEdit: {id: 1}
 }
 
 const SELECTED_QUIZ = 'SELECTED_QUIZ'

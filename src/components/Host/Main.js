@@ -21,9 +21,9 @@ class Main extends Component {
         
     }
     getQuizzes(){
-        axios.get(`/api/getQuizzes`).then(res => {
+        axios.get(`http://localhost:3000/api/getQuizzes`).then(res => {
             this.setState({
-                quizzes: res.data
+                quizzes: res.data.data
             })
         })
     }
@@ -49,6 +49,7 @@ class Main extends Component {
            return <Redirect to='/game'/>
         }
         let {quizzes} = this.state;
+        console.log(quizzes)
         let mappedQuizzes = quizzes.map(quiz => {
             return(
                 <div key={quiz.id} className='kwizz-container' >

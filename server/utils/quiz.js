@@ -10,7 +10,7 @@ class Quiz{
 
         // SAMPLE PLAYERS ARR [{id: 0, name: 'will', score: [1,4,60], qAnswered: false}, 
         //                     {id: 1, name: 'bill', score: [1,3,40], qAnswered: true}]
-        this.players = [];
+        this.players = [{id: 0, name: 'student 1', score: [1,4,60], qAnswered: false}, {id: 1, name: 'student 2', score: [1,3,40], qAnswered: true}]
         this.playerCounter = 0;
 
         this.getQuestions(app);

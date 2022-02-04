@@ -11,7 +11,7 @@ class Questions extends Component {
         super();
         this.state = {
             questions: [],
-            quiz: {},
+            quiz: {id: 1},
             newName: '',
             newInfo: '',
             toggle: false
@@ -19,7 +19,7 @@ class Questions extends Component {
     }
     componentDidMount() {
         this.setState({
-            quiz: this.props.quizToEdit
+            quiz: {id: 1}
         })
         this.getQuestions();
     }
@@ -68,6 +68,7 @@ class Questions extends Component {
 
     render() {
         let { questions } = this.state;
+        console.log(questions)
         if (questions) {
             var mappedQuestions = questions.map((question) => {
                 return (
@@ -150,7 +151,7 @@ class Questions extends Component {
 }
 function mapStateToProps(state) {
     return {
-        quizToEdit: state.quizToEdit
+        quizToEdit: {id: 1}
     }
 }
 

@@ -11,10 +11,10 @@ class Player extends Component {
         super()
         this.state = {
             pinCorrect: false,
-            gameStarted: false,
+            gameStarted: true,
             questionOver: false,
             answerSubmitted: false,
-            answeredCorrect: false,
+            answeredCorrect: true,
             score: 0
         }
         this.submitAnswer = this.submitAnswer.bind(this);
@@ -77,7 +77,16 @@ class Player extends Component {
                         :
                         gameStarted && !questionOver && !answerSubmitted
                         ?
-                        <PlayerQuestions submitAnswer ={this.submitAnswer} />
+                        this.props.selectedPin == "1234" ?
+                            <div> 
+                                <p>What is 1 + 1?</p>
+                                <PlayerQuestions submitAnswer={this.submitAnswer} q1={7} q2={5} q3={3} q4={2} />
+                            </div>
+                            :
+                            <div>
+                                <p>What is 2 + 2?</p>
+                                <PlayerQuestions submitAnswer={this.submitAnswer} q1={8} q2={6} q3={4} q4={3} />
+                            </div>
                         :
                         gameStarted && !questionOver && answerSubmitted
                         ?
